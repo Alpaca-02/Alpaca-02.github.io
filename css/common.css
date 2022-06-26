@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+/* 초기화 영역 */
+html, body, div, header, nav, section, article, aside, footer, figure, figcaption,
+legend, ul,ol,li,dl,dt,dd,h1,h2,h3,h4,p{
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+    list-style: none;
+}
+fieldset {
+    border: 0;
+}
+.hidden, legend {
+    display: none;
+}
+
+/* 웹 폰트 */
+@font-face {
+    font-family: "Nanum";
+    font-weight: 400;
+    src: url("font/NanumGothic.eot?#iefix")format("embedded-opentype"),
+    url("font/NanumGothic.woff")format("woff"),
+    url("font/NanumGothic.ttf")format("truetype");
+}
+@font-face {
+    font-family: "NanumBold";
+    font-weight: 600;
+    src: url("font/NanumGothicBold.eot?#iefix")format("embedded-opentype"),
+    url("font/NanumGothicBold.woff")format("woff"),
+    url("font/NanumGothicBold.ttf")format("truetype");
+}
+@font-face {
+    font-family: "NanumEX";
+    font-weight: 900;
+    src: url("font/NanumGothicExtraBold.eot?#iefix")format("embedded-opentype"),
+    url("font/NanumGothicExtraBold.woff")format("woff"),
+    url("font/NanumGothicExtraBold.ttf")format("truetype");
+}
+
+/* 링크 스타일 */
+a:link {
+    color: #5d5d5d;
+    text-decoration: none;
+}
+a:visited {
+    color: #5d5d5d;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: #79b4b7;
+}
+
+/* 기본 스타일 */
+body {
+    font-family: "Nanum";
+    color: #333;
+    background-color: #fff;
+    line-height: 1.2;
+    background-color: #fefbf3;
+}
+
+/*------------------본문--------------------*/
+#skipNav {
+    position: absolute;
+    left: -9999px;
+}
+header, #banner, #contentArea, #footer {
+    width: 930px;
+    margin:auto;
+}
+
+/* 헤더 영역 시작 */
+header{
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+#title{
+    height: 75px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.logo {
+    position: absolute;
+    left: 10px;
+}
+.logo > h1 {
+    display: inline-block;
+    background: url(../images/title.png) no-repeat;
+    width: 150.6px;
+    height: 75px;
+    background-size: 125px 65px;
+    background-position: center center;
+    /* IR */
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: 150.6px;
+}
+/* 검색창 */
+#search {
+    position: absolute;
+    right: 200px;
+}
+#search form {
+    margin: 0px;
+}
+
+/* 타이틀 아이콘 */
+#mainIcon {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+#mainIcon li{
+    float: right;
+    margin-right: 15px;
+}
+
+/* 타이틀 아래 구분선*/
+
+/* 하단 메뉴 */ 
+#menuBar {
+    border-bottom: 1px solid #ccc;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+#menuBar  h2 a {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    background: url(../images/icon/menuBar.png) no-repeat;
+    background-size: 30px 30px;
+    /* IR */
+    text-indent: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+    /* 하단 메뉴 */
+.menuBar_drop{
+    display: none;
+    position: absolute;
+    z-index: 10;
+}
+.dropDown{
+    display: inline-block;
+}
+.menuBar_drop a {
+    display: block;
+    padding: 10px;
+    background-color: #ccc;
+}
+.dropDown:hover .menuBar_drop {
+    display: block;
+}
+/* 헤더 영역 종료 */
+
+/*---------------------------------------------*/
+
+/* 메*/
