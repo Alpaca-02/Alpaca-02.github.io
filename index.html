@@ -8,6 +8,9 @@
     <!-- css 호출 -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/common.css">
+
+    <!--웹폰트 링크 연결-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- 건너뛰기 링크 (Tab키로 영역링크 / 웹 접근성) -->
@@ -21,7 +24,7 @@
             <div id="title">
                 <!-- 로고 영역 시작-->
                 <div class="logo">
-                    <h1>Alpaca</h1>
+                    <h1><a href="index.html">PacaBooks</a></h1>
                 </div>
                 <!-- 로고 영역 종료 -->
                 <!-- /////////////////////////////////////-->
@@ -31,7 +34,7 @@
                     <form action="search.jsp" method="get" id="searchForm">
                         <fieldset>
                             <legend>검색창</legend>
-                            <button type="submit">검색</button>
+                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i><span class="hidden">검색</span></button>
                             <input type="search" id="keyword" name="keyword" required>
                         </fieldset>
                     </form>
@@ -42,9 +45,9 @@
                 <div id="mainIcon">
                     <h2 class="hidden">메인 아이콘</h2>
                     <ul>
-                        <li><a href="#">알림</a></li>
-                        <li><a href="#">카트</a></li>
-                        <li><a href="#">마이페이지</a></li>
+                        <li><a href="#"><i class="fa fa-bell" aria-hidden="true"></i><span class="hidden">알림</span></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hidden">카트</span></a></li>
+                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden">마이페이지</span></a></li>
                     </ul>
                 </div>
                 <!-- 아이콘 영역 종료 -->
@@ -104,23 +107,27 @@
                 <div id="downBar"></div>
                 <!--책 이미지-->
                 <div id="bookImg">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <img id="img1" src="images/todayBook/저만치 혼자서.jpg" alt="저만치 혼자서">
+                    <div>
+                        <h4>[강산무진] 이후 16년, 김훈 두번째 소설집</h4><br>
+                        <p>비루한 인간사를 허무하게 바라보던 김훈의 시선은 16년의 세월을 지나며 조금 더 애틋해진 듯 하다. 물론 [저만치 혼자서]에서도 인간의 생애는 그들의 고통이나 절망과 관계없이 무심하게 흐르고, 시간은 살아가는 요령을 알려주는 대가로 그들의 신체를 허물어갈 뿐이다.</p>
+                    </div>
+                    <img id="img2" src="images/todayBook/스파이패밀리.jpg" alt="스파이패밀리">
+                    <img id="img3" src="images/todayBook/류.jpg" alt="류">
                 </div>
                 <!--사이드 메뉴-->
                 <div id="bookSide">
-                    <div class="side1">
-                        <h4></h4>
-                        <p></p>
+                    <div class="side side1">
+                        <a href="#img1"><img src="images/todayBook/저만치 혼자서.jpg" alt="저만치 혼자서"></a>
+                        <h4><a href="#img1">[강산무진] 이후 16년,<br>김훈 두번째 소설집</a></h4>
                     </div>
-                    <div class="side2">
-                        <h4></h4>
-                        <p></p>
+                    <div class="side side2">
+                        <a href="#img2"><img src="images/todayBook/스파이패밀리.jpg" alt="스파이패밀리"></a>
+                        <h4><a href="#img2">제 9권<br>온/오프 동시발매</a></h4>
                     </div>
-                    <div class="side3">
-                        <h4></h4>
-                        <p></p>
+                    <div class="side side3">
+                        <a href="#img3"><img src="images/todayBook/류.jpg" alt="류"></a>
+                        <h4><a href="#img3">심사위원 만장일치로 선정된 나오키상 수상작!</a></h4>
                     </div>
                 </div>
             </section>
@@ -144,24 +151,26 @@
             <!-- 베스트 셀러 영역 시작 -->
             <section id="bestSeller">
                 <h3>베스트 셀러</h3>
-                <div class="bestMenu" id="novel">
-                    <h4>소설</h4>
-                    <div class="bestBook">
-                        <ul>
-                            <li><a href="#"></a></li>
-                        </ul>
+                <div class="bestTop">
+                    <div class="bestMenu" id="novel">
+                        <h4>소설</h4>
+                        <div class="bestBook">
+                            <ul>
+                                <li><a href="#"></a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="bestMenu" id="essay">
-                    <h4>에세이/시</h4>
-                    <div class="bestBook">
+                    <div class="bestMenu" id="essay">
+                        <h4>에세이/시</h4>
+                        <div class="bestBook">
 
+                        </div>
                     </div>
-                </div>
-                <div class="bestMenu" id="comic">
-                    <h4>만화</h4>
-                    <div class="bestBook">
-                        
+                    <div class="bestMenu" id="comic">
+                        <h4>만화</h4>
+                        <div class="bestBook">
+                            
+                        </div>
                     </div>
                 </div>
             </section>
