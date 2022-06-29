@@ -518,6 +518,7 @@ header{
 .day div:hover{
     box-shadow: none;
     transition: all 0.3s;
+    background-color: #79b4b7;
 }
 
 .normalList {
@@ -526,8 +527,23 @@ header{
 }
 .normalList ol {
     display: flex;
-
+    position: relative;
     margin: 0 20px 0 40px;
+}
+.normalList ol li::before{
+    content: counter(number, decimal);
+    font-weight: bold;
+    color: #fefbf3;
+    text-shadow: 1px 1px 5px #666;
+    padding: 2px 8px ;
+    border-radius: 0 0 10px 0;
+    position: absolute;
+    top: 14px;
+    z-index: 20;
+    background-color: rgba(157, 157, 157, 0.7);
+}
+.normalList ol li:first-child:before{
+    background-color: rgba(121, 180, 183, 0.7);
 }
 .normalList ol li {
     flex: 1 1 0;
@@ -537,6 +553,8 @@ header{
     position: relative;
 
     transition: 0.2s;
+    /* ol 리스트 순번을 가져옴*/
+    counter-increment: number;
 
 }
 .normalList ol li img{
@@ -577,21 +595,44 @@ header{
     height: 700px;
     margin-top: 10px;
 
-    border: 1px solid #ccc;
 }
 #bestSeller > h3 {
     flex: 1 1 0;
+
+    font-size: 1.6em;
+    text-shadow: 1px 1px 5px #ccc;
+
+    padding-left: 20px;
+    padding-top: 20px;
 }
 #bestSeller > .bestTop {
     flex: 8 8 0;
     display: flex;
 
-    border: 1px solid #ccc;
 }
 .bestMenu {
     flex: 1 1 0;
+    position: relative;
 
-    border: 1px solid #ccc;
+}
+.bestMenu h4{
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 5px #ccc;
+}
+.bestBook {
+    width: 250px;
+    height: 550px;
+    background-color: #f8f0df;
+    margin: 35px 27px;
+
+    position: relative;
+    top: 5px;
+
+    box-shadow: 2px 2px 5px #ccc;
+
 }
     /* 베스트 셀러 영역 종료 */
 /* 메인 영역 종료 */
