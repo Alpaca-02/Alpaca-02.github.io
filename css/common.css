@@ -135,6 +135,9 @@ header{
     margin-right: 25px;
     font-size: 30px;
 }
+#mainIcon li:hover{
+    transform: scale(1.1);
+}
 
 /* 타이틀 아래 구분선*/
 
@@ -170,7 +173,7 @@ header{
 .menuBar_drop{
     height: 0;
     z-index: 10;
-    background-color: #ccc;
+    background-color: rgba(157, 157, 157, 0.8);
     border-radius: 0 0 10px 10px;
     position: relative;
     top: -5px;
@@ -179,12 +182,20 @@ header{
 }
 .menuBar_drop a {
     display: block;
-    padding: 10px 20px;
+    font-weight: 700;
+    padding: 15px 20px;
+    color: #ebe8e1;
+}
+.menuBar_drop a:first-child {
+    padding-top: 15px;
 }
 .dropDown:hover .menuBar_drop{
     height: 200px;
     opacity: 1;
     transition: all 0.3s;
+}
+.menuBar_drop a:hover{
+    color: #f1deb5;
 }
 /* 헤더 영역 종료 */
 
@@ -291,10 +302,12 @@ header{
 }
 #todayBook h3 {
     position: absolute;
-    left: 15px;
-    top: 15px;
+    left: 295px;
+    top: 60px;
     font-size: 1.5em;
     font-weight: 900;
+
+    text-shadow: 1px 1px 5px #ccc;
 }
 #downBar {
     position: absolute;
@@ -314,15 +327,16 @@ header{
 }
 #bookImg  img {
     position: absolute;
-    height: 300px;
-    left: 50px;
-    bottom: 30px;
+    height: 320px;
+    left: 40px;
+    bottom: 35px;
     border: 1px solid #ccc;
-    box-shadow: 5px 5px 20px #333;
+    box-shadow: 1px 1px 20px #333;
     z-index: 5;
     display: none;
 }
-#bookImg div {
+
+#bookImg >div>div {
     display: inline-block;
     position: absolute;
     width: 350px;
@@ -332,6 +346,45 @@ header{
     color: #666;
     text-shadow: 2px 2px 5px #ccc;
 }
+#bookImg>div>div{
+    display: none;
+}
+.innerImg h4{
+    color: #79b4b7;
+}
+/* 말풍선 삼각형 */
+.innerImg div {
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-bottom: 30px solid transparent;
+    border-top: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-right: 30px solid #9d9d9d;
+}
+/* 삼각형 위치 조정*/
+.tri1{
+    left: 340px;
+    top: -80px;
+}
+.tri2{
+    left: 340px;
+    top: 50px;
+}
+.tri3 {
+    left: 340px;
+    bottom: -50px;
+}
+.innerTitle {
+    position: relative;
+    top: 40px;
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+.innerTitle span{
+    font-weight: bold;
+    font-size: 1.1em;
+}
 
 #bookSide {
     flex: 2.5 2.5 0;
@@ -339,7 +392,9 @@ header{
     flex-direction: column;
 }
 .side{
+    flex: 1 1 0;
     background-color: #9d9d9d;
+    transition: all 0.1s;
 }
 .side img {
     display: inline-block;
@@ -348,6 +403,9 @@ header{
     border: 1px solid #ddd;
     box-shadow: 3px 3px 5px #333;
     cursor: pointer;
+}
+.side h4 {
+    color: #fefbf3;
 }
 .side h4{
     display: inline-block;
@@ -358,34 +416,55 @@ header{
     width: 100px;
     cursor: pointer;
 }
-
-
-#img1:target{
-    z-index: 10;
-    display: inline-block;
-}
-#img2:target.side2{
-    color: #79b4b8;
+.side h4 a{
+    letter-spacing: 1px;
+    color: #f8f6f1;
+    text-shadow: 1px 1px 1px #555;
 }
 
-#img2:target{
-    z-index: 10;
-    display: inline-block;
-}
-#img3:target{
-    z-index: 10;
-    display: inline-block;
-}
-
-
-
-.side {
-    flex: 1 1 0;
-}
 .side2 {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 }
+
+.side:hover{
+    background-color: #79b4b7;
+    transition: all 0.1s;
+}
+/* hover 위치???????
+.side:hover .innerImg div {
+    border-bottom: 30px solid transparent;
+    border-top: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-right: 30px solid #79b4b7;
+}
+*/
+
+
+/* 사이드 메뉴 타겟 */
+#img1:target img {
+    z-index: 10;
+    display: inline-block;
+}
+#img1:target .innerImg {
+    display: inline-block;
+}
+#img2:target img{
+    z-index: 10;
+    display: inline-block;
+}
+#img2:target .innerImg {
+    display: inline-block;
+}
+#img3:target img{
+    z-index: 10;
+    display: inline-block;
+}
+#img3:target .innerImg {
+    display: inline-block;
+}
+
+
     /* 오늘의 책 영역 종료 */
 
     /*/////////////////////////////////*/
@@ -395,8 +474,95 @@ header{
     height: 400px;
     width: 930px;
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.normalBest_title {
+    flex: 1 1 0;
+    position: relative;
 
-    border: 1px solid #ccc;
+}
+.normalBest_title h3 {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 5px #ccc;
+}
+.normalBest_title > div{
+    width: 300px;
+    position: absolute;
+    left: 180px;
+    top: 13px;
+}
+.day div {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 7px 15px;
+    background-color: #9d9d9d;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px #666;
+
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #fefbf3;
+    text-shadow: 1px 1px 5px #666;
+
+    cursor: pointer;
+
+}
+/*버튼부분 스크립트 적용전 임시 눌림*/
+.day div:first-child{
+    background-color: #79b4b7;
+}
+.day div:hover{
+    box-shadow: none;
+    transition: all 0.3s;
+}
+
+.normalList {
+    flex: 6 6 0;
+
+}
+.normalList ol {
+    display: flex;
+
+    margin: 0 20px 0 40px;
+}
+.normalList ol li {
+    flex: 1 1 0;
+    display: inline-block;
+    height: 340px;
+    margin-right: 20px;
+    position: relative;
+
+    transition: 0.2s;
+
+}
+.normalList ol li img{
+    width: 100%;
+    height: 230px;
+    position: absolute;
+    top: 15px;
+
+    box-shadow: 1px 1px 5px #555;
+}
+
+.normalList ol li:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.normalList ol > li > p {
+    position: absolute;
+    bottom: 30px;
+    font-size: 0.75em;
+    line-height: 1.7em;
+
+    text-shadow: 1px 1px 5px #ccc;
+}
+.normalList ol> li > p strong {
+    font-size: 1.1em;
 }
 
     /* 일반도서 영역 종료 */
