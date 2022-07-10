@@ -4,7 +4,7 @@
     position: relative;
     display: flex;
     width: 930px;
-    height: 300px;
+    height: 400px;
     margin-top: 10px;
 }
 .banner {
@@ -15,7 +15,7 @@
 }
 .banner1{
     flex: 20 20 0;
-    background-image: url(../images/banner/1645679328771_MjIwMjI0.webp);
+    background-image: url(../images/banner/친밀한-이방인-배너.png);
     transition: all 0.5s;
 }
 .banner1 > div {
@@ -25,17 +25,21 @@
     transition: 0.5s;
     white-space: nowrap;
     overflow: hidden;
+
+    color: #fff;
 }
 .banner > div> h3{
     font-size: 1.5em;
     position: absolute;
-    bottom: 50px;
+    bottom: 55px;
     left: 30px;
+    text-shadow: 2px 2px 5px #9d9d9d;
 }
 .banner > div > p {
     position: absolute;
     bottom: 30px;
     left: 30px;
+    text-shadow: 2px 2px 5px #9d9d9d;
 }
 
 .banner2 > div {
@@ -48,7 +52,6 @@
     opacity: 0;
     color: #fff;
     font-weight: bold;
-    background: linear-gradient(to bottom, rgba(37, 183, 82, 0) 0%,rgba(37, 183, 82, 0) 60%, rgba(37, 183, 82, 1) 100%);
 }
 
 
@@ -56,7 +59,7 @@
 
 .banner2 {
     flex: 1 1 0;
-    background-image: url(../images/banner/1653875406985_MjIwNTMw.webp);
+    background-image: url(../images/banner/역행자-배너.png);
     transition: all 0.5s;
     position: relative;
 }
@@ -131,8 +134,13 @@
     bottom: 35px;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 20px #333;
+    transition: all 0.2s;
     z-index: 5;
-    display: none;
+}
+#bookImg  img:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 20px #333;
+    transition: all 0.2s;
 }
 
 #bookImg >div>div {
@@ -145,35 +153,24 @@
     color: #666;
     text-shadow: 2px 2px 5px #ccc;
 }
-#bookImg>div>div{
-    display: none;
-}
+
 .innerImg h4{
     color: #79b4b7;
 }
 /* 말풍선 삼각형 */
-.innerImg div {
+.innerImg .tri {
     position: absolute;
     height: 0;
     width: 0;
+    left: 340px;
+    top: -80px;
     border-bottom: 30px solid transparent;
     border-top: 30px solid transparent;
     border-left: 30px solid transparent;
     border-right: 30px solid #9d9d9d;
 }
 /* 삼각형 위치 조정*/
-.tri1{
-    left: 340px;
-    top: -80px;
-}
-.tri2{
-    left: 340px;
-    top: 50px;
-}
-.tri3 {
-    left: 340px;
-    bottom: -50px;
-}
+
 .innerTitle {
     position: relative;
     top: 40px;
@@ -194,6 +191,7 @@
     flex: 1 1 0;
     background-color: #9d9d9d;
     transition: all 0.1s;
+    cursor: pointer;
 }
 .side img {
     display: inline-block;
@@ -215,7 +213,7 @@
     width: 100px;
     cursor: pointer;
 }
-.side h4 a{
+.side h4 span{
     letter-spacing: 1px;
     color: #f8f6f1;
     text-shadow: 1px 1px 1px #555;
@@ -241,27 +239,7 @@
 
 
 /* 사이드 메뉴 타겟 */
-#img1:target img {
-    z-index: 10;
-    display: inline-block;
-}
-#img1:target .innerImg {
-    display: inline-block;
-}
-#img2:target img{
-    z-index: 10;
-    display: inline-block;
-}
-#img2:target .innerImg {
-    display: inline-block;
-}
-#img3:target img{
-    z-index: 10;
-    display: inline-block;
-}
-#img3:target .innerImg {
-    display: inline-block;
-}
+
 
 
     /* 오늘의 책 영역 종료 */
@@ -362,6 +340,7 @@
     top: 15px;
 
     box-shadow: 1px 1px 5px #555;
+
 }
 
 .normalList ol li:hover {
