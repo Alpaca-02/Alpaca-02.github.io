@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
 
+    <!-- 스크립트 호출 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+
 
     <!--웹폰트 링크 연결-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -56,7 +60,7 @@
             <!--로고, 검색, 아이콘 영역 종료 -->
             <!--//////////////////////////////////////////////////-->
             <!-- 메뉴바 영역 시작 -->
-            <div id="menuBar">
+            <nav id="menuBar">
                 <div class="dropDown">
                 <h2><a>메뉴바</a></h2>
                     <div class="menuBar_drop">
@@ -66,7 +70,7 @@
                         <a href="#">만화</a>
                     </div>
                 </div>
-            </div>
+            </nav>
             <!-- 메뉴바 영역 종료 -->
         </header>
         <!-- 헤더 영역 종료 -->
@@ -171,7 +175,7 @@
                             <p><a href="#"><strong>역행자</strong><br>자청</a></p>
                         </li>
                         <li>
-                            <a href="#"><img src="images/dayBest/밀리터리.jpg" alt="밀리터리"></a>
+                            <a href="#"><img src="images/dayBest/밀리터리 리뷰 이지.jpg" alt="밀리터리"></a>
                             <p><a href="#"><strong>밀리터리 리뷰 이지 2207</strong><br>편집부</a></p>
                         </li>
                         <li>
@@ -208,31 +212,36 @@
                                 <li>
                                     <a href="#">
                                         <img src="images/bestSeller/novel/친밀한이방인.jpg" alt="친밀한이방인">
-                                        <p><strong>친절한 이방인</strong><br>정한아 저</p>
+                                        <p class="title"><strong>친밀한 이방인</strong><br>정한아 저</p>
+                                        <p class="price">13000원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="images/bestSeller/novel/작별인사.jpg" alt="작별인사">
-                                        <p><strong>작별인사</strong><br>김영하</p>
+                                        <p class="title"><strong>작별인사</strong><br>김영하</p>
+                                        <p class="price">14000원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="images/bestSeller/novel/불편한 편의점.jpg" alt="불편한편의점">
-                                        <p><strong>불편한 편의점</strong><br>김호연</p>
+                                        <p class="title"><strong>불편한 편의점</strong><br>김호연</p>
+                                        <p class="price">14000원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="images/bestSeller/novel/홍학의 자리.jpg" alt="홍학의 자리">
-                                        <p><strong>홍학의 자리</strong><br>정해연</p>
+                                        <p class="title"><strong>홍학의 자리</strong><br>정해연</p>
+                                        <p class="price">14000원</p>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="book_info/far_alone.html">
                                         <img src="images/bestSeller/novel/저만치혼자서.jpg" alt="저만치혼자서">
-                                        <p><strong>저만치 혼자서</strong><br>김훈</p>
+                                        <p class="title"><strong>저만치 혼자서</strong><br>김훈</p>
+                                        <p class="price">15000원</p>
                                     </a>
                                 </li>
                             </ol>
@@ -245,31 +254,36 @@
                                 <li>
                                     <a href="#">
                                         <img src="images/bestSeller/essay/하고싶은말이 많고요 구릅니다.jpg" alt="하고싶은말이">
-                                        <p><strong>하고 싶은 말이 많고요, 구릅니다</strong><br>김지우</p>
+                                        <p class="title"><strong>하고 싶은 말이 많고요, 구릅니다</strong><br>김지우</p>
+                                        <p class="price">16000원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="images/bestSeller/essay/로버트 브라우닝 시선.jpg" alt="로버트 브라우닝 시선">
-                                        <p><strong>로버트 브라우닝 시선</strong><br>로버트 브라우닝</p>
+                                        <p class="title"><strong>로버트 브라우닝 시선</strong><br>로버트 브라우닝</p>
+                                        <p class="price">18000원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="images/bestSeller/essay/자기만의 공간.jpg" alt="자기만의 공간">
-                                        <p><strong>자기만의 공간</strong><br>유주얼</p>
+                                        <p class="title"><strong>자기만의 공간</strong><br>유주얼</p>
+                                        <p class="price">13500원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="images/bestSeller/essay/비닐봉지는 안주셔도 되요.jpg" alt="비닐봉지는 안 주셔도 되요">
-                                        <p><strong>비닐봉지는 안 주셔도 되요</strong><br>최정화</p>
+                                        <p class="title"><strong>비닐봉지는 안 주셔도 되요</strong><br>최정화</p>
+                                        <p class="price">13800원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="images/bestSeller/essay/지금 말하지않으면 늦어버린다.jpg" alt="지금 말하지 않으면 늦어버린다.">
-                                        <p><strong>지금 말하지 않으면 늦어버린다</strong><br>이청</p>
+                                        <p class="title"><strong>지금 말하지 않으면 늦어버린다</strong><br>이청</p>
+                                        <p class="price">15000원</p>
                                     </a>
                                 </li>
                             </ol>
@@ -280,33 +294,38 @@
                         <div class="bestBook">
                             <ol>
                                 <li>
-                                    <a href="#">
+                                    <a href="book_info/spyfamily.html">
                                         <img src="images/bestSeller/comic/스파이패밀리.jpg" alt="스파이패밀리">
-                                        <p><strong>스파이패밀리</strong><br>엔도 타츠야</p>
+                                        <p class="title"><strong>스파이패밀리</strong><br>엔도 타츠야</p>
+                                        <p class="price">6000원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="images/bestSeller/comic/도쿄리벤저스.jpg" alt="도쿄리벤저스">
-                                        <p><strong>도쿄리벤저스</strong><br>와쿠이 켄</p>
+                                        <p class="title"><strong>도쿄리벤저스</strong><br>와쿠이 켄</p>
+                                        <p class="price">6000원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="images/bestSeller/comic/헌터x헌터 신장판.jpg" alt="헌터x헌터 신장판">
-                                        <p><strong>헌터X헌터 신장판</strong><br>토가시 요시히로</p>
+                                        <p class="title"><strong>헌터X헌터 신장판</strong><br>토가시 요시히로</p>
+                                        <p class="price">5500원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="images/bestSeller/comic/주술회전.jpg" alt="주술회전">
-                                        <p><strong>주술회전</strong><br>아쿠타미 게게</p>
+                                        <p class="title"><strong>주술회전</strong><br>아쿠타미 게게</p>
+                                        <p class="price">6000원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="images/bestSeller/comic/지박소년하나코군.jpg" alt="지박소년하나코군">
-                                        <p><strong>지박소년 하나코 군</strong><br>아이다 이로</p>
+                                        <p class="title"><strong>지박소년 하나코 군</strong><br>아이다 이로</p>
+                                        <p class="price">6000원</p>
                                     </a>
                                 </li>
                             </ol>

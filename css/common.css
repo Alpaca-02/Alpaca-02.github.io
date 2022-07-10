@@ -18,18 +18,14 @@ fieldset {
 
 /* 웹 폰트 */
 @font-face {
-    font-family: "Nanum";
+    font-family: "OneMob";
     font-weight: 400;
-    src: url("font/NanumGothic.eot?#iefix")format("embedded-opentype"),
-    url("font/NanumGothic.woff")format("woff"),
-    url("font/NanumGothic.ttf")format("truetype");
+    src:url("../fonts/one_origin/ONE\ Mobile\ Light.ttf")format("truetype");
 }
 @font-face {
-    font-family: "NanumBold";
+    font-family: "OneMobBold";
     font-weight: 600;
-    src: url("font/NanumGothicBold.eot?#iefix")format("embedded-opentype"),
-    url("font/NanumGothicBold.woff")format("woff"),
-    url("font/NanumGothicBold.ttf")format("truetype");
+    src:url("../fonts/one_origin/ONE\ Mobile\ Bold.ttf")format("truetype");
 }
 @font-face {
     font-family: "NanumEX";
@@ -82,11 +78,14 @@ header{
     padding-bottom: 10px;
 }
 
-h1 img{
+h1{
     position: relative;
     width: 300px;
     top: 25px;
     left: 10px;
+}
+h1 img{
+    width: 300px;
 }
 /* 검색창 */
 #search {

@@ -7,6 +7,7 @@
     <title>PacaBooks | 저만치 혼자서</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bookinfo.css">
 
         <!--웹폰트 링크 연결-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -44,7 +45,7 @@
                     <ul>
                         <li><a href="#"><i class="fa fa-bell" aria-hidden="true"></i><span class="hidden">알림</span></a></li>
                         <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hidden">카트</span></a></li>
-                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden">마이페이지</span></a></li>
+                        <li><a href="../login.html"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden">마이페이지</span></a></li>
                     </ul>
                 </div>
                 <!-- 아이콘 영역 종료 -->
@@ -52,7 +53,7 @@
             <!--로고, 검색, 아이콘 영역 종료 -->
             <!--//////////////////////////////////////////////////-->
             <!-- 메뉴바 영역 시작 -->
-            <div id="menuBar">
+            <nav id="menuBar">
                 <div class="dropDown">
                 <h2><a>메뉴바</a></h2>
                     <div class="menuBar_drop">
@@ -62,7 +63,7 @@
                         <a href="#">만화</a>
                     </div>
                 </div>
-            </div>
+            </nav>
             <!-- 메뉴바 영역 종료 -->
         </header>
         <!-- 헤더 영역 종료 -->
@@ -70,7 +71,35 @@
         
         <!------------------------------------------------------------->
 
+        <!-- 책 내용 영역 시작 -->
+            <!-- 책정보 영역 시작 -->
+        <section id="bookInfo">
+            <h2 class="hidden">책 정보</h2>
+            <div class="bookCover">
+                <img src="../images/todayBook/저만치 혼자서.jpg" alt="저만치 혼자서">
+                <div class="prvBtn"><i class="fa fa-book" aria-hidden="true"></i> 미리보기</div>
+            </div>
+            <div class="bookExp">
+                <h3 class="title">저만치 혼자서</h3>
+                <p class="category">소설 <strong>&gt;</strong> 한국소설 <strong>&gt;</strong> 한국 단편소설</p>
+                <p class="writer">김훈 저</p>
+                <p class="publisher">문학동네</p>
 
+                <table>
+                    <tr><th rowspan="2">구매가</th><td>정가</td><td class="oriPrice">14000원</td></tr>
+                    <tr><td>할인가</td><td>13600원</td></tr>
+                </table>
+                <div class="btnArea">
+                    <button>구매하기</button>
+                    <button>장바구니</button>
+                </div>
+            </div>
+
+        </section>
+            <!-- 책정보 영역 종료 -->
+
+
+        <!-- 책 내용 영역 종료  -->
 
 
 
