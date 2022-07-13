@@ -7,28 +7,78 @@
 body {
     box-sizing: border-box;
 }
+header{
+    /* sticky 였던 header 고정*/
+    position: relative;
+    top: 0px;
+
+}
+
+#wrapper {
+    position: relative;
+}
+
 #bookInfo{
     width: 930px;
-    height: 400px;
+    height: 430px;
     margin: 0 auto;
 
     display: flex;
+
+
 }
 #bookInfo .bookCover {
     flex: 1 1 0;
     text-align: center;
 
 }
+#bookInfo .bookImg {
+    width: 250px;
+    height: 375px;
+    margin: 30px 0 0 40px;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px #ccc;
+    border: 1px solid #ccc;
 
-#bookInfo .bookCover img{
-    width: 200px;
-    box-shadow: 1px 1px 5px #ccc;
-
-    display: inline-block;
-    margin-top: 20px;
 }
 
-#bookInfo .bookCover .prvBtn {
+
+#bookInfo .bookCover img{
+    width: 250px;
+    height: 375px;
+
+
+    display: inline-block;
+}
+#bookInfo .prevCover {
+    width: 250px;
+    height: 375px;
+    background-color: rgba(0,0,0,0.5);
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    transition: all 0.3s;
+    z-index: 10;
+}
+#bookInfo .prevCover span{
+    display: inline-block;
+    padding: 10px;
+    margin-top: 150px;
+
+    border: 1px solid #9d9d9d;
+    border-radius: 10px;
+
+    background-color: rgba(121, 180, 183, 0.4);
+    color: #fefbf3;
+    text-shadow: 1px 1px 5px #9d9d9d;
+    font-size: 1.5em;
+}
+#bookInfo .bookImg:hover .prevCover{
+    transform: translateY(-383px);
+    transition: all 0.2s;
+}
+
+/* #bookInfo .bookCover .prvBtn {
     display: inline-block;
     width: 100px;
     height: 30px;
@@ -39,12 +89,12 @@ body {
 
     margin-top: 20px;
     line-height: 30px;
-}
+} */
 
 
 
 #bookInfo .bookExp {
-    flex: 2 2 0;
+    flex: 1.5 1.5 0;
 
     padding: 30px;
 
@@ -98,6 +148,84 @@ body {
 
 } 
 
+/* 결제혜택 영역 시작 */
+#bookInfo .bookExp .event {
+    margin-top: 30px;
+    position: relative;
+}
+#bookInfo .bookExp .event h3{
+    display: inline-block;
+    color: #5d5d5d;
+    font-size: 1em;
+}
+
+/* 드롭다운 버튼 */
+#bookInfo .bookExp .event span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    margin-left: 10px;
+    background-color: #9d9d9d;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+#bookInfo .bookExp .event ul{
+    display: inline-block;
+    position: absolute;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    left: 75px;
+    top: 30px;
+
+    background-color: #f8f5ee;
+
+    display: none;
+
+    z-index: 20;
+}
+#bookInfo .bookExp .event ul li {
+    height: 60px;
+    position: relative;
+}
+#bookInfo .bookExp .event ul li:nth-child(2){
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+#bookInfo .bookExp .event ul img {
+    width: 50px;
+    padding: 20px 5px 5px 10px;
+}
+#bookInfo .bookExp .event ul p {
+    display: inline-block;
+    width: 150px;
+    position: absolute;
+    right: -5px;
+    top: 13px;
+    font-size: 0.8em;
+}
+
+#bookInfo .bookExp .event::after{
+    content: "";
+    height: 3px;
+    width: 85%;
+    border-radius: 25%;
+    position: absolute;
+
+    top: 35px;
+    left: -15px;
+
+    background-color: rgba(204,204,204,0.5);
+}
+/* 결제혜택 영역 종료 */
+
+/* 구매수량 영역 시작*/
+#bookInfo .bookExp form{
+    margin-top: 50px;
+}
+/* 구매수량 영역 종료*/
 
 
 
@@ -108,7 +236,7 @@ table{
     width: 450px;
     height: 100px;
 
-    margin-top: 50px;
+    margin-top: 20px;
     background-color: rgba(248, 240, 223, 0.7);
     
     text-align: center;
@@ -118,10 +246,17 @@ table{
 table th {
     font-size: 1.1em;
     font-family: OneMobBold;
+    font-weight: 900;
 
     background-color: rgba(121, 180, 183, 0.8);
 
     border-radius: 10px 0 0 10px;
+}
+
+table tr td {
+    font-size: 0.8em;
+    font-weight: bold;
+    font-family: OneMob;
 }
 
 table tr:nth-child(2) > td{
@@ -133,24 +268,87 @@ table .oriPrice{
 }
     /* 가격표 영역 종료 */
 
-    /* 구매버튼 영역 시작 */
+
+
+/* 책 내용 영역 종료 */
+
+/* 구매바 영역 시작 */
+#upperBar {
+    height: 75px;
+    width: 100%;
+    background-color: bl;
+    margin: 0 auto;
+
+    position: sticky;
+    top: 0px;
+    background-color: #f8f0df;
+    border-top: 1px solid #9d9d9d;
+}
+#upperBar .barArea{
+    margin: 0 auto;
+    width: 930px;
+    height: 100%;
+    position: relative;
+    background-color: #f8f0df;
+
+}
+#upperBar .barArea h3 {
+    font-size: 1.8em;
+
+    text-shadow: 1px 1px 5px #ccc;
+    padding: 10px 0px 5px 20px;
+
+
+}
+#upperBar .barArea .category {
+    margin-left: 10px;
+    font-size: 0.9em;
+}
 .btnArea {
     width: 450px;
     text-align: right;
-    margin-top: 15px;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+
 }
 .btnArea button {
     border: 1px solid #ccc;
     border-radius: 10px;
-    padding: 5px 25px;
+    padding: 10px 40px;
     background-color: #79b4b7;
     box-shadow: 1px 1px 5px #ccc;
-
+    
     font-family: OneMobBold;
     color: #3d3d3d;
-    margin-left: 15px;
+    margin-left: 10px;
 
 }
-    /* 구매버튼 영역 종료 */
+/* 구매바 영역 종료 */
 
-/* 책 내용 영역 종료 */
+/* 책 소개 영역 시작*/
+#bookAnno {
+    width: 930px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+#bookAnno h2, #bookAnno p {
+    padding: 20px 35px 0 35px;
+    text-align: justify;
+
+    text-shadow: 1px 1px 5px #ccc;
+}
+#bookAnno h2{
+    padding:50px 0 0 20px;
+}
+#bookAnno >p{
+    line-height: 1.5em;
+    
+}
+#bookAnno img{
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* 책 소개 영역 종료*/

@@ -167,7 +167,7 @@
     border-bottom: 30px solid transparent;
     border-top: 30px solid transparent;
     border-left: 30px solid transparent;
-    border-right: 30px solid #9d9d9d;
+    border-right: 30px solid #79b4b7;
 }
 /* 삼각형 위치 조정*/
 
@@ -217,6 +217,9 @@
     letter-spacing: 1px;
     color: #f8f6f1;
     text-shadow: 1px 1px 1px #555;
+}
+.side1 {
+    background-color: #79b4b7;
 }
 
 .side2 {
@@ -521,3 +524,12 @@
 }
     /* 공지사항 영역 종료 */
 /* 메인 영역 종료 */
+
+
+/* 모바일의 경우의 미디어 쿼리*/
+@media screen and (max-width:500px){
+    body, #banner, #contentArea, #normalBest, #bestSeller header footer{
+        width: 100%;
+    }
+
+}

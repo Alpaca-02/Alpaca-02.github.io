@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 /* 초기화 영역 */
 html, body, div, header, nav, section, article, aside, footer, figure, figcaption,
 legend, ul,ol,li,dl,dt,dd,h1,h2,h3,h4,p{
@@ -68,14 +69,28 @@ header, #banner, #contentArea, #footer {
 
 /* 헤더 영역 시작 */
 header{
-    margin-top: 50px;
+    margin-top: 20px;
     box-sizing: border-box;
+    position: sticky;
+    top: 0px;
+    z-index: 40;
+    width: 100%;
+        border-bottom: 1px solid #ccc;
+
+    background-color: #fefbf3;
 }
 #title{
+    width: 930px;
     height: 75px;
-    border-bottom: 1px solid #ccc;
+
     position: relative;
     padding-bottom: 10px;
+
+    margin: 0 auto;
+}
+#titleOut{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
 }
 
 h1{
@@ -133,26 +148,16 @@ h1 img{
 
 /* 하단 메뉴 */ 
 #menuBar {
-    border-bottom: 1px solid #ccc;
     height: 50px;
-    width: 100%;
+    width: 930px;
+    margin: 0 auto;
     position: relative;
     z-index: 50;
 }
 #menuBar h2{
     display: inline-block;
-}
-#menuBar  h2 a {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    margin: 10px;
-    background: url(../images/icon/menuBar.png) no-repeat;
-    background-size: 30px 30px;
-    /* IR */
-    text-indent: 30px;
-    white-space: nowrap;
-    overflow: hidden;
+    font-size: 2.3em;
+    cursor: pointer;
 }
 
     /* 하단 메뉴 */
@@ -166,9 +171,11 @@ h1 img{
     background-color: rgba(157, 157, 157, 0.8);
     border-radius: 0 0 10px 10px;
     position: relative;
-    top: -5px;
+    top: 6px;
     opacity: 0;
     transition: all 0.3s;
+    /* 임시 조정 */
+    display: none;
 }
 .menuBar_drop a {
     display: block;
@@ -180,13 +187,18 @@ h1 img{
     padding-top: 15px;
 }
 .dropDown:hover .menuBar_drop{
-    height: 200px;
-    opacity: 1;
+    /* height: 200px;
+    opacity: 1; */
     transition: all 0.3s;
 }
 .menuBar_drop a:hover{
     color: #f1deb5;
 }
+
+    /* 사이드바 영역 시작*/ 
+
+
+    /* 사이드바 영역 종료*/ 
 /* 헤더 영역 종료 */
 
 /*---------------------------------------------*/
@@ -249,3 +261,11 @@ footer{
     /* 주소영역 종료 */
     
 /* 푸터영역 종료 */
+
+
+/* 모바일의 경우의 미디어 쿼리 */
+@media screen and (max-width:500px){
+    body{
+        width: 100%;
+    }
+}

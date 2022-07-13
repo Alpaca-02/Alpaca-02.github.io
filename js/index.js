@@ -22,7 +22,7 @@ var tri = ['-80px','50px','180px']
 
 
 // 일반도서 링크저장
-// var dayBest_link {}
+// var dayBest_link []
 
 //일반도서 이미지 저장
 var normalBest_img = [['역행자','밀리터리 리뷰 이지','인플레이션에서 살아남기','천연 세제 생활','불편한 편의점'],
@@ -58,11 +58,6 @@ $(function(){
 
         $('.tri').css('top',tri[index])
 
-        // $(this).hover(function(){
-        //     ('.tri').css('border-right','30px solid #79b4b7');
-        // },function(){
-        //     ('.tri').css('border-right','30px solid #9d9d9d');
-        // });
         
 
         // 사이드 백그라운드 컬러 초기화
@@ -76,6 +71,9 @@ $(function(){
         });
 
         $(this).css('backgroundColor','#79b4b7');
+        $(this).hover(function(){
+            $(this).css('backgroundColor','#79b4b7');
+        })
 
         
     });
