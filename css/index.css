@@ -85,6 +85,35 @@
     border-radius: 0 0 10px 10px;
     transition: all 0.5s;
 }
+
+#banner .bannerBtn {
+    width: 35px;
+    height: 35px;
+    background-color: #f8f8f8;
+    color: #9d9d9d;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    line-height: 35px;
+    text-align: center;
+
+    box-shadow: 1px 1px 5px #666;
+
+    cursor: pointer;
+    transition: all 0.2s;
+}
+#banner .bannerBtn:hover{
+    box-shadow: none;
+    transition: all 0.2s;
+}
+#banner .leftBtn {
+    left: -15px;
+    top: 180px;
+}
+#banner .rightBtn {
+    right: -15px;
+    top: 180px;
+}
 /* 배너영역 종료 */
 
 /*----------------------------------------------------------*/
@@ -374,6 +403,7 @@
     width: 930px;
     height: 850px;
     margin-top: 10px;
+    margin-bottom: 30px;
 
 }
 #bestSeller > h3 {
@@ -495,6 +525,8 @@
     height: 50px;
 
     border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
     position: relative;
 }
 #notice h3::after{
@@ -504,6 +536,7 @@
     left: 10px;
     color: #9d9d9d;
 }
+
 #notice h3, #notice ul li {
     float: left;
     margin: 15px 20px 0px 20px;
@@ -522,6 +555,8 @@
 #notice > a>i {
     color: #79b4b7;
 }
+
+
     /* 공지사항 영역 종료 */
 /* 메인 영역 종료 */
 

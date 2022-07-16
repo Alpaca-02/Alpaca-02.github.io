@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PacaBooks</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="images/paca_icon.ico">
     <!-- css 호출 -->
 
     <link rel="stylesheet" href="css/normalize.css">
@@ -23,7 +25,12 @@
 <body>
     <!-- 건너뛰기 링크 (Tab키로 영역링크 / 웹 접근성) -->
     <!-- 내부점프 a태그 -->
-    <a id="skipNav" href="#contentsArea">본문 바로가기</a>
+    <div id="skipNav">
+        <a class="skipToday" href="#todayBook">오늘의 책</a>
+        <a class="skipNormal" href="#normalBest">일반도서 BEST</a>
+        <a class="skipBest" href="#bestSeller">베스트 셀러</a>
+        <a class="skipNotice" href="#notice">공지사항</a>
+    </div>
     <!-- 건너뛰기 링크 종료 -->
 
     
@@ -104,7 +111,10 @@
 
                 </div>
             </div>
+            <div class="bannerBtn leftBtn"><span class="hidden">좌측버튼</span><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+            <div class="bannerBtn rightBtn"><span class="hidden">우측버튼</span><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
         </div>
+
         <!-- 배너 영역 종료 -->
 
         <!----------------------------------------------------->
@@ -179,24 +189,24 @@
                 <div class="normalList">
                     <ol class="normalBest dayBest">
                         <li>
-                            <a href="#"><img src="images/dayBest/역행자.jpg" alt="역행자"></a>
-                            <p><a href="#"><strong>역행자</strong><br>자청</a></p>
+                            <a href="book_info/reverse.html"><img src="images/dayBest/역행자.jpg" alt="역행자"></a>
+                            <p><a href="book_info/reverse.html"><strong>역행자</strong><br>자청</a></p>
                         </li>
                         <li>
-                            <a href="#"><img src="images/dayBest/밀리터리 리뷰 이지.jpg" alt="밀리터리"></a>
-                            <p><a href="#"><strong>밀리터리 리뷰 이지 2207</strong><br>편집부</a></p>
+                            <a href="book_info/close_stranger.html"><img src="images/dayBest/친밀한이방인.jpg" alt="친밀한 이방인"></a>
+                            <p><a href="book_info/close_stranger.html"><strong>친밀한 이방인</strong><br>정한아</a></p>
                         </li>
                         <li>
-                            <a href="#"><img src="images/dayBest/인플레이션에서 살아남기.jpg" alt="인플레이션"></a>
-                            <p><a href="#"><strong>인플레이션에서 살아남기</strong><br>오건영</a></p>
+                            <a href="book_info/inflation.html"><img src="images/dayBest/인플레이션에서 살아남기.jpg" alt="인플레이션"></a>
+                            <p><a href="book_info/inflation.html"><strong>인플레이션에서 살아남기</strong><br>오건영</a></p>
                         </li>
                         <li>
-                            <a href="#"><img src="images/dayBest/천연 세제 생활.jpg" alt="천연세제생활"></a>
-                            <p><a href="#"><strong>천연 세제 생활</strong><br>박철원</a></p>
+                            <a href="book_info/natural_detergents.html"><img src="images/dayBest/천연 세제 생활.jpg" alt="천연세제생활"></a>
+                            <p><a href="book_info/natural_detergents.html"><strong>천연 세제 생활</strong><br>박철원</a></p>
                         </li>
                         <li>
-                            <a href="#"><img src="images/dayBest/불편한 편의점.jpg" alt="불편한 편의점"></a>
-                            <p><a href="#"><strong>불편한 편의점</strong><br>김호연</a></p>
+                            <a href="book_info/convenience.html"><img src="images/dayBest/불편한 편의점.jpg" alt="불편한 편의점"></a>
+                            <p><a href="book_info/convenience.html"><strong>불편한 편의점</strong><br>김호연</a></p>
                         </li>
                     </ol>
                     <!-- <ol class="normalBest weekBest">
@@ -225,7 +235,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="book_info/goodbye.html">
                                         <img src="images/bestSeller/novel/작별인사.jpg" alt="작별인사">
                                         <p class="title"><strong>작별인사</strong><br>김영하</p>
                                         <p class="price">14000원</p>
@@ -381,7 +391,7 @@
                     <span> · 서울특별시 통신판매업신고번호 : 제 123호 ▶<a href="#">사업자 정보확인</a></span>
                 </address>
                 <!--저작권 정보-->
-                <p class="copyright">copyright since &copy; 2010 <br>by PacaBooks CORPORATION ALL RIGHTS RESERVED</p>
+                <p class="copyright">copyright since &copy; 2022 <br>by PacaBooks CORPORATION ALL RIGHTS RESERVED</p>
                 <!-- 주소 영역 종료 -->
             </div>
         </footer>

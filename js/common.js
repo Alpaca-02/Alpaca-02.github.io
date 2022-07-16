@@ -15,6 +15,7 @@ $(function(){
                     height:'200px'
                 });
             },100)
+            $('#menuBar h2').html('<i class="fa fa-times" aria-hidden="true"></i><span class="hidden">메뉴바</span>');
         }else{
             $('.menuBar_drop').css({
                 opacity:'0',
@@ -22,7 +23,8 @@ $(function(){
             });
             setTimeout(function(){
                 $('.menuBar_drop').css('display','none');
-            },100)
+            },100);
+            $('#menuBar h2').html('<i class="fa fa-bars" aria-hidden="true"></i><span class="hidden">메뉴바</span>');
         }
 
 

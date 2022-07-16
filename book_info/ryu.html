@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/bookinfo.css">
 
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../images/paca_icon.ico">
+
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/bookinfo.js"></script>
     <script src="../js/common.js"></script>
@@ -99,9 +102,24 @@
                 <div class="event">
                     <h3>결제 혜택</h3><span><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
                     <ul>
-                        <li><a href="#">1번 혜택</a></li>
-                        <li><a href="#">2번 혜택</a></li>
-                        <li><a href="#">3번 혜택</a></li>
+                        <li>
+                            <a href="#">
+                                <img src="../images/bookInfo/dicount_logo/hyundailogo.png" alt="">
+                                <p><strong>현대카드 5% 즉시할인</strong><br>1만원 이상 결제시</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../images/bookInfo/dicount_logo/kakaopay.png" alt="">
+                                <p><strong>카카오페이 5천원 할인</strong><br>5만원 이상 결제시, 1회</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../images/bookInfo/dicount_logo/bclogo.png" alt="">
+                                <p><strong>BC카드 6% 즉시할인</strong><br>BC모바일 결제시</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -145,6 +163,20 @@
                 <img src="../images/bookInfo/류info.jpg" alt="류 책 이미지">
             </section>
                 <!-- 책 설명 영역 종료 -->
+
+                <!-- 책 품목정보 영역 시작 -->
+        <section id="bookItem">
+            <h2>품목정보</h2>
+            <table border="1px">
+                <tr><th>출간일</th><td>2022년 06월 22일</td></tr>
+                <tr><th>쪽수, 무게, 크기</th><td>484쪽 | 566g | 133*203*24mm</td></tr>
+                <tr><th>ISBN13</th><td>9791164796885</td></tr>
+                <tr><th>ISBN10</th><td>1164796887</td></tr>
+
+            </table>
+        </section>
+
+            <!-- 책 품목정보 영역 종료 -->
     
             <!-- 책 내용 영역 종료  -->
     
@@ -188,4 +220,9 @@
         </div>
         <!-- wrapper 종료-->
     </body>
+    <script>
+        $('#bookInfo .bookImg').click(function(){
+            window.open('../book_prev/ryu_prev.html','미리보기','width=1170,height=840');
+        });
+    </script>
     </html>

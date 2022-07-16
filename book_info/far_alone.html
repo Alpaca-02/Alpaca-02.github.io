@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/bookinfo.css">
 
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../images/paca_icon.ico">
+
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/bookinfo.js"></script>
     <script src="../js/common.js"></script>
+
 
         <!--웹폰트 링크 연결-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -86,7 +90,7 @@
             <div class="bookCover">
                 <div class="bookImg">
                     <img src="../images/todayBook/저만치 혼자서.jpg" alt="저만치 혼자서">
-                    <a href="#"><div class="prevCover"><span><i class="fa fa-book" aria-hidden="true"></i> 미리보기</div></span></a>
+                    <div class="prevCover"><span><i class="fa fa-book" aria-hidden="true"></i> 미리보기</div></span>
                     <!--<div class="prvBtn"><i class="fa fa-book" aria-hidden="true"></i> 미리보기</div>-->
                 </div>
             </div>
@@ -124,7 +128,7 @@
                     <label>수량</label></span><input type="number" name="bookCount" id="bookCount" value="1" min="1" max="10">
                 </form>
 
-                <table>
+                <table id="priceTable">
                     <tr><th rowspan="2">구매가</th><td>정가</td><td class="oriPrice">14000원</td></tr>
                     <tr><td>할인가</td><td class="disPrice">13600원</td></tr>
                 </table>
@@ -159,6 +163,20 @@
             <img src="../images/bookInfo/저만치혼자서info.jpg" alt="저만치혼자서 책 이미지">
         </section>
             <!-- 책 설명 영역 종료 -->
+
+            <!-- 책 품목정보 영역 시작 -->
+        <section id="bookItem">
+            <h2>품목정보</h2>
+            <table border="1px">
+                <tr><th>출간일</th><td>2022년 06월 20일</td></tr>
+                <tr><th>쪽수, 무게, 크기</th><td>264쪽 | 368g | 128*188*20mm</td></tr>
+                <tr><th>ISBN13</th><td>9788954686921</td></tr>
+                <tr><th>ISBN10</th><td>8954686923</td></tr>
+
+            </table>
+        </section>
+
+            <!-- 책 품목정보 영역 종료 -->
 
         <!-- 책 내용 영역 종료  -->
 
@@ -202,4 +220,10 @@
     </div>
     <!-- wrapper 종료-->
 </body>
+
+<script>
+    $('#bookInfo .bookImg').click(function(){
+        window.open('../book_prev/far_alone_prev.html','미리보기','width=1180,height=750');
+    });
+</script>
 </html>

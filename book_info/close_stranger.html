@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/bookinfo.css">
 
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../images/paca_icon.ico">
+
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/bookinfo.js"></script>
     <script src="../js/common.js"></script>
@@ -99,9 +102,24 @@
                 <div class="event">
                     <h3>결제 혜택</h3><span><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
                     <ul>
-                        <li><a href="#">1번 혜택</a></li>
-                        <li><a href="#">2번 혜택</a></li>
-                        <li><a href="#">3번 혜택</a></li>
+                        <li>
+                            <a href="#">
+                                <img src="../images/bookInfo/dicount_logo/hyundailogo.png" alt="">
+                                <p><strong>현대카드 5% 즉시할인</strong><br>1만원 이상 결제시</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../images/bookInfo/dicount_logo/kakaopay.png" alt="">
+                                <p><strong>카카오페이 5천원 할인</strong><br>5만원 이상 결제시, 1회</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../images/bookInfo/dicount_logo/bclogo.png" alt="">
+                                <p><strong>BC카드 6% 즉시할인</strong><br>BC모바일 결제시</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -143,6 +161,19 @@
                 한 소설가가 자신의 소설을 훔친 비밀스러운 인물의 행적을 추적해나가는 이 유려한 미스터리는 때로는 더 나은 삶의 조건을 쟁취하기 위해, 때로는 목숨을 부지하기 위해 거침없이 삶을 뒤엎는 한 인물의 일생을 여러 사람의 목소리를 겹쳐가며 복원해낸다. 그렇게 내달려온 이야기의 끝, 지금까지 촘촘하게 쌓아온 서사를 단숨에 무너뜨리는 반전은 강렬한 전율에 목말라 있던 우리를 가을밤의 싸늘한 한기 속으로 끌어다놓는다.</p>
         </section>
             <!-- 책 설명 영역 종료 -->
+
+            <!-- 책 품목정보 영역 시작 -->
+        <section id="bookItem">
+            <h2>품목정보</h2>
+            <table border="1px">
+                <tr><th>출간일</th><td>2017년 10월 13일</td></tr>
+                <tr><th>쪽수, 무게, 크기</th><td>256쪽 | 312g | 133*200*20mm</td></tr>
+                <tr><th>ISBN13</th><td>9788954648523</td></tr>
+                <tr><th>ISBN10</th><td>8954648525</td></tr>
+            </table>
+        </section>
+
+            <!-- 책 품목정보 영역 종료 -->
 
         <!-- 책 내용 영역 종료  -->
 
@@ -186,4 +217,9 @@
     </div>
     <!-- wrapper 종료-->
 </body>
+<script>
+    $('#bookInfo .bookImg').click(function(){
+        window.open('../book_prev/close_stranger_prev.html','미리보기','width=1180,height=750');
+    });
+</script>
 </html>

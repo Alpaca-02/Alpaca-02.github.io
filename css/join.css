@@ -74,14 +74,14 @@ html, body{
 /* 중앙 계정생성 창 시작*/
 #create {
     width: 300px;
-    height: 520px;
+    height: 550px;
     margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 25px;
     background-color: rgba(121,180,183,0.2);
 
     position: relative;
-    top: 20%;
+    top: 15%;
 
     box-shadow: 1px 1px 3px #ccc;
 
@@ -127,15 +127,15 @@ html, body{
     width: 220px;
     height: 30px;
 
-    background-color: #9d9d9d;
+    background-color: #79b4b7;
 
     border-radius: 10px;
     border: 1px solid #ccc;
 
     display: inline-block;
 
-}
-#joinForm .find {
+    box-shadow: 1px 1px 5px #666;
+
     color: #fefbf3;
     text-decoration: none;
     font-weight: bold;
@@ -146,18 +146,31 @@ html, body{
     height: 100%;
 
     margin-top: 10px;
+    transition: all 0.2s;
+}
+#joinForm .find:hover{
+    background-color: #9d9d9d;
+    box-shadow: none;
+    transition: all 0.2s;
 }
 
 #joinForm button {
-    margin-top: 10px;
+    margin-top: 15px;
     border: 1px solid #ccc;
     border-radius: 30px;
-    padding: 5px 30px;
+    padding: 5px 20px;
     background-color: #79b4b7;
     
+    box-shadow: 1px 1px 5px #666;
 
     font-weight: bold;
     color: #fefbf3;
+    transition: all 0.2s;
+}
+#joinForm button:hover{
+    background-color: #9d9d9d;
+    box-shadow: none;
+    transition: all 0.2s;
 }
 
 .adv{
@@ -167,18 +180,24 @@ html, body{
     padding: 5px 10px;
     border-radius: 10px;
 }
-.adv > p{
+.adv > .title {
+    font-weight: bolder;
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+.adv > .radio{
     text-align: right;
     color: #777;
     font-weight: bold;
 }
-.adv > p:first-child {
+.adv > .radio:first-child {
     margin-bottom: 5px;
 }
-.adv > p >span {
+.adv > .radio >span {
     text-align: left;
 }
-.adv>p> input {
+.adv>.radio> input {
     width: 30px;
 }
 
