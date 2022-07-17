@@ -22,7 +22,11 @@
 <body>
         <!-- 건너뛰기 링크 (Tab키로 영역링크 / 웹 접근성) -->
     <!-- 내부점프 a태그 -->
-    <a id="skipNav" href="#contentsArea">본문 바로가기</a>
+    <div id="skipNav">
+        <a class="skipBookInfo" href="#bookInfo">책정보</a>
+        <a class="skipBookAnno" href="#bookAnno">책소개</a>
+        <a class="skipItem" href="#bookItem">품목정보</a>
+    </div>
     <!-- 건너뛰기 링크 종료 -->
     <div id="wrapper">
         <!-- 헤더 영역 -->
@@ -89,7 +93,7 @@
             <div class="bookCover">
                 <div class="bookImg">
                     <img src="../images/dayBest/역행자.jpg" alt="역행자">
-                    <a href="#"><div class="prevCover"><span><i class="fa fa-book" aria-hidden="true"></i> 미리보기</div></span></a>
+                    <div class="prevCover"><span><i class="fa fa-book" aria-hidden="true"></i> 미리보기</div></span>
                     <!--<div class="prvBtn"><i class="fa fa-book" aria-hidden="true"></i> 미리보기</div>-->
                 </div>
             </div>
@@ -128,8 +132,8 @@
                 </form>
 
                 <table>
-                    <tr><th rowspan="2">구매가</th><td>정가</td><td class="oriPrice">14000원</td></tr>
-                    <tr><td>할인가</td><td class="disPrice">13600원</td></tr>
+                    <tr><th rowspan="2">구매가</th><td>정가</td><td class="oriPrice">17500원</td></tr>
+                    <tr><td>할인가</td><td class="disPrice">15750원</td></tr>
                 </table>
 
             </div>
@@ -168,7 +172,7 @@
             <!-- 책 품목정보 영역 시작 -->
         <section id="bookItem">
             <h2>품목정보</h2>
-            <table border="1px">
+            <table>
                 <tr><th>출간일</th><td>2022년 05월 30일</td></tr>
                 <tr><th>쪽수, 무게, 크기</th><td>314쪽 | 148*195*30mm</td></tr>
                 <tr><th>ISBN13</th><td>9788901260716</td></tr>
@@ -220,4 +224,9 @@
     </div>
     <!-- wrapper 종료-->
 </body>
+<script>
+    $('#bookInfo .bookImg').click(function(){
+        window.open('../book_prev/reverse_prev.html','미리보기','width=1180,height=700');
+    });
+</script>
 </html>

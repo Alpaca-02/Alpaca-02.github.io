@@ -31,16 +31,19 @@ header{
     flex: 1 1 0;
     text-align: center;
 
+    
+
 }
 #bookInfo .bookImg {
     width: 250px;
     height: 375px;
     margin: 30px 0 0 40px;
     overflow: hidden;
-    box-shadow: 3px 3px 5px #ccc;
+    box-shadow: 10px 10px 5px #ccc,-3px -3px 5px #ccc;
     border: 1px solid #ccc;
 
     cursor: pointer;
+    
 }
 
 
@@ -48,8 +51,9 @@ header{
     width: 250px;
     height: 375px;
 
-
     display: inline-block;
+
+    background: linear-gradient(to right,rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.2)20%);
 }
 #bookInfo .prevCover {
     width: 250px;
@@ -352,7 +356,7 @@ header{
 }
 #bookAnno img{
     width: 80%;
-    margin: 20px auto;
+    margin-top: 80px;
 }
 
 /* 책 소개 영역 종료*/
@@ -364,6 +368,7 @@ header{
     margin: 0 auto;
     text-align: center;
 
+
 }
 #bookItem h2{
     text-align: left;
@@ -372,5 +377,28 @@ header{
 }
 #bookItem table {
     display: inline-block;
+    pad: 10px;
+    margin: 30px 0;
+}
+#bookItem table th {
+    background-color: #79b4b7;
+    padding: 5px 30px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+#bookItem table td{
+    background-color: #f8f0df;
+    padding: 5px 90px;
+
+    border-top: 1px solid #fff;
+}
+
+#bookItem table tr:first-child :nth-child(2){
+    border: none;
+    border-radius: 0 20px 0 0;
+}
+#bookItem table tr:first-child :first-child{
+    border-top: none;
+    border-radius: 20px 0 0 0;
 }
 /* 책 품목정보 영역 종료 */

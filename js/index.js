@@ -22,7 +22,7 @@ var tri = ['-80px','50px','180px']
 
 
 // 일반도서 링크저장
-var normalBest_link = [['reverse','close_stranger','inflation','natural_detergents','convenience'],['reverse','inflation','son','goodbye','convenience'],['reverse','inflation','goodbye','convenience','oneThing']];
+var normalBest_link = [['reverse','close_stranger','inflation','natural_detergents','convenience'],['reverse','inflation','sonMoney','goodbye','convenience'],['reverse','inflation','goodbye','convenience','oneThing']];
 
 //일반도서 이미지 저장
 var normalBest_img = [['역행자','친밀한이방인','인플레이션에서 살아남기','천연 세제 생활','불편한 편의점'],

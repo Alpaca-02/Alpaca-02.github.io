@@ -23,7 +23,11 @@
 <body>
         <!-- 건너뛰기 링크 (Tab키로 영역링크 / 웹 접근성) -->
     <!-- 내부점프 a태그 -->
-    <a id="skipNav" href="#contentsArea">본문 바로가기</a>
+    <div id="skipNav">
+        <a class="skipBookInfo" href="#bookInfo">책정보</a>
+        <a class="skipBookAnno" href="#bookAnno">책소개</a>
+        <a class="skipItem" href="#bookItem">품목정보</a>
+    </div>
     <!-- 건너뛰기 링크 종료 -->
     <div id="wrapper">
         <!-- 헤더 영역 -->
@@ -167,7 +171,7 @@
             <!-- 책 품목정보 영역 시작 -->
         <section id="bookItem">
             <h2>품목정보</h2>
-            <table border="1px">
+            <table>
                 <tr><th>출간일</th><td>2022년 06월 20일</td></tr>
                 <tr><th>쪽수, 무게, 크기</th><td>264쪽 | 368g | 128*188*20mm</td></tr>
                 <tr><th>ISBN13</th><td>9788954686921</td></tr>
