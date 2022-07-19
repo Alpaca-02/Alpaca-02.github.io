@@ -3,6 +3,8 @@
 
 
 
+//배너 url 저장
+var bannerUrl = ['close_stranger.html','reverse.html','startBasics.html','inflation.html','flamingo.html'];
 
 
 
@@ -22,7 +24,9 @@ var tri = ['-80px','50px','180px']
 
 
 // 일반도서 링크저장
-var normalBest_link = [['reverse','close_stranger','inflation','natural_detergents','convenience'],['reverse','inflation','sonMoney','goodbye','convenience'],['reverse','inflation','goodbye','convenience','oneThing']];
+var normalBest_link = [['reverse','close_stranger','inflation','natural_detergents','convenience'],
+['reverse','inflation','sonMoney','goodbye','convenience'],
+['reverse','inflation','goodbye','convenience','one_thing']];
 
 //일반도서 이미지 저장
 var normalBest_img = [['역행자','친밀한이방인','인플레이션에서 살아남기','천연 세제 생활','불편한 편의점'],
@@ -45,18 +49,81 @@ $(function(){
     // 상단 메뉴바 종료
 
     // 배너영역 시작
+
+
+
+    function moveBanner(index){
+        $('.banner').css('flex', '0 0 0');
+        $('.banner').eq(index).css('flex','20 20 0');
+        $('.banner').eq(index+1).css('flex','1 1 0');
+        $('.banner').eq(index+2).css('flex','1 1 0');
+
+        $('.banner>div').css('opacity','0');
+        $('.banner>div').eq(index).css('opacity','1');
+
+        if(index==3){
+
+            $('.banner').eq(index).css('flex','20 20 0');
+            $('.banner').eq(index+1).css('flex','1 1 0');
+            $('.banner').eq(index-1).css('flex','1 1 0');
+        }
+        if(index==4){
+
+            $('.banner').eq(index).css('flex','20 20 0');
+            $('.banner').eq(index-2).css('flex','1 1 0');
+            $('.banner').eq(index-1).css('flex','1 1 0');
+        }
+
+    }
+
+    var index = 0;
+    moveBanner(index);
+
+
+    // 배너 클릭시 링크이동 또는 배너 위치 이동
+    $('.banner').click(function(){
+        indexSub=$(this).index()-1;
+        if(index==indexSub){
+            window.location.href = 'book_info/'+bannerUrl[index];
+        }else{
+            index=indexSub;
+            moveBanner(index);
+        }
+    });
+
+
+    $('.rightBtn').click(function(){
+        index++;
+        if(index==5){
+            index=0;
+        }
+        moveBanner(index);
+    });
+    $('.leftBtn').click(function(){
+        index--;
+        if(index==-1){
+            index=4;
+        }
+        moveBanner(index);
+    });
+
+    setInterval(function(){
+        $('.rightBtn').trigger('click');
+    },5000);
+
+
     // 배너영역 종료
 
     // 오늘의 책 영역 시작
     $('#bookSide .side').click(function(){
-        index = $(this).index();
-        $('#bookImg a').attr('href','book_info/'+todayBook_href[index]+'.html')
+        index2 = $(this).index();
+        $('#bookImg a').attr('href','book_info/'+todayBook_href[index2]+'.html')
 
-        $('#bookImg a img').attr('src','images/todayBook/'+todayBook_img[index]+'.jpg').attr('alt',todayBook_img[index]);
+        $('#bookImg a img').attr('src','images/todayBook/'+todayBook_img[index2]+'.jpg').attr('alt',todayBook_img[index]);
 
-        $('#bookImg .innerImg').html(todayBook_inner[index]);
+        $('#bookImg .innerImg').html(todayBook_inner[index2]);
 
-        $('.tri').css('top',tri[index])
+        $('.tri').css('top',tri[index2])
 
         
 
@@ -81,22 +148,24 @@ $(function(){
 
     // 일반도서 역역 시작
     $('.normalBest_title .day > div').click(function(){
-        index = $(this).index();
+        index3 = $(this).index();
         $('.normalBest_title .day > div').css('backgroundColor','#9d9d9d');
         $(this).css('backgroundColor','#79b4b7');
 
 
         $('.normalBest > li img').attr('src',function(index2){
-            return 'images/dayBest/'+normalBest_img[index][index2]+'.jpg';
+            return 'images/dayBest/'+normalBest_img[index3][index2]+'.jpg';
         })
-        // $('.normalBest > li >a').attr('href',function(index2){
-        //     return 'book_info/'+normalBest_link+'.html/'
-        // });
+        
         $('.normalBest > li >p >a').html(function(index2){
-            return '<strong>'+normalBest_title[index][index2]+'</strong><br>'+normalBest_writer[index][index2];
+            return '<strong>'+normalBest_title[index3][index2]+'</strong><br>'+normalBest_writer[index][index2];
+        });
+
+        $('.normalBest > li >a').attr('href',function(index2){
+            return 'book_info/'+normalBest_link[index3][index2]+'.html'
         });
         $('.normalBest > li >p>a').attr('href',function(index2){
-            return 'book_info/'+normalBest_link[index][index2]+'.html/'
+            return 'book_info/'+normalBest_link[index3][index2]+'.html'
         });
 
         // $('.normalBest > li >p >a').html(function(index2){
@@ -104,4 +173,6 @@ $(function(){
         // });
     });
     // 일반도서 역역 종료
+
+
 })

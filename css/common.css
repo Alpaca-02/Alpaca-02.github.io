@@ -28,13 +28,7 @@ fieldset {
     font-weight: 600;
     src:url("../fonts/one_origin/ONE\ Mobile\ Bold.ttf")format("truetype");
 }
-@font-face {
-    font-family: "NanumEX";
-    font-weight: 900;
-    src: url("font/NanumGothicExtraBold.eot?#iefix")format("embedded-opentype"),
-    url("font/NanumGothicExtraBold.woff")format("woff"),
-    url("font/NanumGothicExtraBold.ttf")format("truetype");
-}
+
 
 /* 링크 스타일 */
 a:link {
@@ -151,12 +145,64 @@ h1 img{
     right: 0px;
     top: 20px;
 }
-#mainIcon li{
+#mainIcon >ul>li{
     float: right;
     margin-right: 25px;
     font-size: 30px;
 }
-#mainIcon li:hover{
+#mainIcon >ul>li i{
+    color: #5d5d5d;
+    cursor: pointer;
+}
+#mainIcon >ul>li i:hover, #mainIcon >ul>li i:focus{
+    color: #79b4b7;
+}
+#mainIcon .myCart{
+    position: absolute;
+    display: inline-block;
+    background-color: #79b4b7;
+    width: 180px;
+    border-radius: 10px;
+    text-align: center;
+
+    font-family: OneMobBold;
+    color: #fefbf3;
+
+    top: 40px;
+    left: -25px;
+
+    display: none;
+
+    box-shadow: 1px 1px 5px #ccc;
+}
+#mainIcon .myCart li {
+    height: 50px;
+    line-height: 50px
+}
+
+#mainIcon .myNotice{
+    position: absolute;
+    display: inline-block;
+    background-color: #79b4b7;
+    width: 180px;
+    border-radius: 10px;
+    text-align: center;
+
+    font-family: OneMobBold;
+    color: #fefbf3;
+
+    top: 40px;
+    left: -25px;
+
+    display: none;
+
+    box-shadow: 1px 1px 5px #ccc;
+}
+#mainIcon .myNotice li {
+    height: 50px;
+    line-height: 50px
+}
+#mainIcon>ul> li:hover, #mainIcon>ul> li:focus{
     transform: scale(1.1);
 }
 
@@ -202,12 +248,8 @@ h1 img{
 .menuBar_drop a:first-child {
     padding-top: 15px;
 }
-.dropDown:hover .menuBar_drop{
-    /* height: 200px;
-    opacity: 1; */
-    transition: all 0.3s;
-}
-.menuBar_drop a:hover{
+
+.menuBar_drop a:hover, .menuBar_drop a:focus{
     color: #f1deb5;
 }
 
@@ -225,6 +267,7 @@ footer{
     position: relative;    
     width: 100%;
     background-color: #9d9d9d;
+    padding-top: 10px;
 }
 #footerInner {
     width: 930px;
@@ -251,6 +294,9 @@ footer{
     left: 15px;
     top: -1px;
     color: #ccc;
+}
+#footerInner ul li:last-child::after{
+    content: "";
 }
     /*상단리스트 종료 */
     /*////////////////////////////////*/
@@ -280,8 +326,8 @@ footer{
 
 
 /* 모바일의 경우의 미디어 쿼리 */
-@media screen and (max-width:500px){
+/* @media screen and (max-width:500px){
     body{
         width: 100%;
     }
-}
+} */

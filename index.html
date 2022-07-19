@@ -62,8 +62,18 @@
                     <div id="mainIcon">
                         <h2 class="hidden">메인 아이콘</h2>
                         <ul>
-                            <li><a href="#"><i class="fa fa-bell" aria-hidden="true"></i><span class="hidden">알림</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hidden">카트</span></a></li>
+                            <li class="notice"><i class="fa fa-bell" aria-hidden="true"></i><span class="hidden">알림</span></li>
+                            <div class="myNotice">
+                                <ul>
+                                    <li>알림이 없습니다.</li>
+                                </ul>
+                            </div>
+                            <li class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hidden">카트</span></li>
+                            <div class="myCart">
+                                <ul>
+                                    <li>카트가 비어있습니다.</li>
+                                </ul>
+                            </div>
                             <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden">마이페이지</span></a></li>
                         </ul>
                     </div>
@@ -94,12 +104,12 @@
         <!-- 배너 영역 시작 -->
         <div id="banner">
             <h2 class="hidden">메인 배너</h2>
-            <div class="banner banner1">
-                <div>
-                    <h3>화제의 소설, 친밀한  이방인</h3>
-                    <p>드라마 &lt;안나&gt; 원작</p>
+                <div class="banner banner1">
+                    <div>
+                        <h3>화제의 소설, 친밀한  이방인</h3>
+                        <p>드라마 &lt;안나&gt; 원작</p>
+                    </div>
                 </div>
-            </div>
             <div class="banner banner2">
                 <div>
                     <h3>역행자</h3>
@@ -108,7 +118,20 @@
             </div>
             <div class="banner banner3">
                 <div>
-
+                    <h3>모든 것은 기본에서 시작한다</h3>
+                    <p>자신의 삶에 대한 반성과 성찰로 빚어낸 강건한 신념과 철학!</p>
+                </div>
+            </div>
+            <div class="banner banner4">
+                <div>
+                    <h3>인플레이션에서 살아남기</h3>
+                    <p>"애프터 인플레, 누가 돈을 벌까?"</p>
+                </div>
+            </div>
+            <div class="banner banner5">
+                <div>
+                    <h3>홍학의 자리</h3>
+                    <p>한국 미스터리 사상 전무후무한 반전과 예측 불가능한 결말!</p>
                 </div>
             </div>
             <div class="bannerBtn leftBtn"><span class="hidden">좌측버튼</span><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
@@ -210,9 +233,28 @@
                         </li>
                     </ol>
                     <!-- <ol class="normalBest weekBest">
-                        <li></li>
-                    </ol>
-                    <ol class="normalBest monthBest">
+                        <li>
+                            <a href="book_info/reverse.html"><img src="images/dayBest/역행자.jpg" alt="역행자"></a>
+                            <p><a href="book_info/reverse.html"><strong>역행자</strong><br>자청</a></p>
+                        </li>
+                        <li>
+                            <a href="book_info/close_stranger.html"><img src="images/dayBest/친밀한이방인.jpg" alt="친밀한 이방인"></a>
+                            <p><a href="book_info/close_stranger.html"><strong>친밀한 이방인</strong><br>정한아</a></p>
+                        </li>
+                        <li>
+                            <a href="book_info/inflation.html"><img src="images/dayBest/인플레이션에서 살아남기.jpg" alt="인플레이션"></a>
+                            <p><a href="book_info/inflation.html"><strong>인플레이션에서 살아남기</strong><br>오건영</a></p>
+                        </li>
+                        <li>
+                            <a href="book_info/natural_detergents.html"><img src="images/dayBest/천연 세제 생활.jpg" alt="천연세제생활"></a>
+                            <p><a href="book_info/natural_detergents.html"><strong>천연 세제 생활</strong><br>박철원</a></p>
+                        </li>
+                        <li>
+                            <a href="book_info/convenience.html"><img src="images/dayBest/불편한 편의점.jpg" alt="불편한 편의점"></a>
+                            <p><a href="book_info/convenience.html"><strong>불편한 편의점</strong><br>김호연</a></p>
+                        </li>
+                    </ol> -->
+                    <!-- <ol class="normalBest monthBest">
                         <li></li>
                     </ol> -->
                 </div>

@@ -12,13 +12,30 @@
     flex: 1 1 0;
     border-radius: 10px;
     background-position: center;
+    transition: all 0.5s;
+
+    position: relative;
+    cursor: pointer;
 }
 .banner1{
-    flex: 20 20 0;
     background-image: url(../images/banner/친밀한-이방인-배너.png);
-    transition: all 0.5s;
 }
-.banner1 > div {
+.banner2 {
+    background-image: url(../images/banner/역행자-배너.png);
+}
+.banner3 {
+    background-image: url(../images/banner/모든것은-기본에서-시작한다-배너.png);
+}
+.banner4 {
+    background-image: url(../images/banner/인플레이션-배너.png);
+}
+.banner5 {
+    background-image: url(../images/banner/홍학의-자리-배너.png);
+}
+.active{
+    flex: 2 2 0;
+}
+/* /* .banner1 > div {
     width: 100%;
     height: 100%;
     position: relative;
@@ -27,48 +44,40 @@
     overflow: hidden;
 
     color: #fff;
+} */
+
+.banner >div {
+    position: absolute;
+    top: 310px;
+    color: #fff;
+    opacity: 0;
+
+    transition: opacity 0.5s;
 }
 .banner > div> h3{
     font-size: 1.5em;
-    position: absolute;
-    bottom: 55px;
+    position: relative;
+    bottom: 23px;
     left: 30px;
-    text-shadow: 2px 2px 5px #9d9d9d;
+    text-shadow: 4px 4px 5px #9d9d9d;
 }
 .banner > div > p {
-    position: absolute;
-    bottom: 30px;
+    position: relative;
+    bottom: 10px;
     left: 30px;
-    text-shadow: 2px 2px 5px #9d9d9d;
-}
-
-.banner2 > div {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: 0.5s;
-    white-space: nowrap;
-    overflow: hidden;
+    text-shadow: 4px 4px 5px #9d9d9d;
+} 
+.bannerTitleMain{
     opacity: 0;
-    color: #fff;
-    font-weight: bold;
 }
 
 
 
 
-.banner2 {
-    flex: 1 1 0;
-    background-image: url(../images/banner/역행자-배너.png);
-    transition: all 0.5s;
-    position: relative;
-}
-.banner3 {
-    background-image: url(../images/banner/1653866919029_MjIwNTE2.webp);
-}
 
-#banner:hover .banner1{
-    flex: 1 1 0;
+
+/* #banner:hover .banner1{
+    flex: 0 0 0;
     transition: all 0.5s;
 }
 
@@ -79,12 +88,8 @@
 #banner:hover .banner2{
     flex: 20 20 0;
     transition: all 0.5s;
-}
-#banner:hover .banner2 >div {
-    opacity: 1;
-    border-radius: 0 0 10px 10px;
-    transition: all 0.5s;
-}
+} */
+
 
 #banner .bannerBtn {
     width: 35px;
@@ -166,7 +171,7 @@
     transition: all 0.2s;
     z-index: 5;
 }
-#bookImg  img:hover {
+#bookImg  img:hover, #bookImg  img:focus {
     transform: scale(1.05);
     box-shadow: 5px 5px 20px #333;
     transition: all 0.2s;
@@ -198,7 +203,6 @@
     border-left: 30px solid transparent;
     border-right: 30px solid #79b4b7;
 }
-/* 삼각형 위치 조정*/
 
 .innerTitle {
     position: relative;
@@ -256,7 +260,7 @@
     border-bottom: 1px solid #ccc;
 }
 
-.side:hover{
+.side:hover, .side:focus{
     background-color: #79b4b7;
     transition: all 0.1s;
 }
@@ -324,14 +328,14 @@
 .day div:first-child{
     background-color: #79b4b7;
 }
-.day div:hover{
+.day div:hover, .day div:focus{
     box-shadow: none;
     transition: all 0.3s;
 }
 
 .normalList {
     flex: 6 6 0;
-
+    position: relative;
 }
 .normalList ol {
     display: flex;
@@ -375,7 +379,7 @@
 
 }
 
-.normalList ol li:hover {
+.normalList ol li:hover, .normalList ol li:focus {
     transform: scale(1.05);
     transition: 0.2s;
 }
@@ -489,7 +493,7 @@
     border: 1px solid #ccc;
     transition: transform 0.1s;
 }
-.bestBook >ol >li:hover img{
+.bestBook >ol >li:hover img,.bestBook >ol >li:focus img{
     transform: scale(1.1);
     transition: transform 0.1s;
 }

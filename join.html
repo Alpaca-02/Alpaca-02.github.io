@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/join.css">
 
+    <script src="js/jquery-3.6.0.min.js"></script>
+
 </head>
 <body>
     <div id="wrapper">
@@ -33,7 +35,7 @@
                     <p>
                         <!--아이디-->
                         <input type="text" name="id" id="id" required placeholder="아이디">
-                        <a href="id_Check.html" class="idCheck"><span class="find">ID중복확인</span></a>
+                        <span class="find">ID중복확인</span>
                     </p>
                     <p>
                         <!--비밀번호-->
@@ -85,4 +87,9 @@
         </footer>
     </div>
 </body>
+<script>
+    $('.find').click(function(){
+        window.open('id_check.html','미리보기','width=400,height=300');
+    });
+</script>
 </html>

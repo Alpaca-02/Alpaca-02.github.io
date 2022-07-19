@@ -22,4 +22,6 @@ $(function(){
         $('.oriPrice').html(oriPrice*bookCount+'원');
         $('.disPrice').html(disPrice*bookCount+'원');
     });
+    
+    // 상단바 스크롤 좌표 => 588
 });

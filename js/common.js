@@ -2,7 +2,15 @@
 
 $(function(){
 
+    $('#mainIcon .cart').click(function(){
+        $('#mainIcon .myNotice').hide();
+        $('#mainIcon .myCart').slideToggle(200);
+    });
 
+    $('#mainIcon .notice').click(function(){
+        $('#mainIcon .myCart').hide();
+        $('#mainIcon .myNotice').slideToggle(200);
+    });
     // 상단메뉴 토글
     var menuSW = false;
     $('#menuBar h2').on('click',function(){
@@ -26,8 +34,7 @@ $(function(){
             },100);
             $('#menuBar h2').html('<i class="fa fa-bars" aria-hidden="true"></i><span class="hidden">메뉴바</span>');
         }
-
-
     });
+
 });
 
