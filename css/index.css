@@ -8,7 +8,7 @@
     margin-top: 10px;
 }
 .banner {
-    margin: 5px;
+    margin: 5px 3px;
     flex: 1 1 0;
     border-radius: 10px;
     background-position: center;
@@ -57,15 +57,16 @@
 .banner > div> h3{
     font-size: 1.5em;
     position: relative;
-    bottom: 23px;
+    bottom: 20px;
     left: 30px;
-    text-shadow: 4px 4px 5px #9d9d9d;
+    text-shadow: 2px 2px 5px #666;
 }
 .banner > div > p {
+    font-weight: bold;
     position: relative;
-    bottom: 10px;
+    bottom: 7px;
     left: 30px;
-    text-shadow: 4px 4px 5px #9d9d9d;
+    text-shadow: 2px 2px 5px #666;
 } 
 .bannerTitleMain{
     opacity: 0;
@@ -112,11 +113,11 @@
     transition: all 0.2s;
 }
 #banner .leftBtn {
-    left: -15px;
+    left: -10px;
     top: 180px;
 }
 #banner .rightBtn {
-    right: -15px;
+    right: -10px;
     top: 180px;
 }
 /* 배너영역 종료 */
@@ -190,6 +191,13 @@
 
 .innerImg h4{
     color: #79b4b7;
+}
+.innerImg p {
+    color: #666;
+}
+.innerImg p:hover {
+    text-shadow: none;
+    transition: 0.2s;
 }
 /* 말풍선 삼각형 */
 .innerImg .tri {
@@ -289,6 +297,8 @@
     margin-top: 10px;
     display: flex;
     flex-direction: column;
+
+    overflow: hidden;
 }
 .normalBest_title {
     flex: 1 1 0;
@@ -339,8 +349,16 @@
 }
 .normalList ol {
     display: flex;
-    position: relative;
-    margin: 0 20px 0 40px;
+    position: absolute;
+    padding: 0 20px 0 40px;
+    box-sizing: border-box;
+    width: 930px;
+}
+.normalList ol:nth-child(2){
+    left: 930px;
+}
+.normalList ol:nth-child(3){
+    left: 1860px;
 }
 .normalList ol li::before{
     content: counter(number, decimal);
@@ -406,7 +424,6 @@
     flex-direction: column;
     width: 930px;
     height: 850px;
-    margin-top: 10px;
     margin-bottom: 30px;
 
 }
@@ -416,7 +433,7 @@
     font-size: 1.6em;
     text-shadow: 1px 1px 5px #ccc;
 
-    padding-left: 20px;
+    padding-left: 10px;
     padding-top: 20px;
 }
 #bestSeller > .bestTop {
