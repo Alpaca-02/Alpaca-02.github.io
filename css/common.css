@@ -230,7 +230,7 @@ h1 img{
 .menuBar_drop{
     height: 0;
     z-index: 10;
-    background-color: rgba(157, 157, 157, 0.8);
+    background-color: rgba(157, 157, 157, 0.9);
     border-radius: 0 0 10px 10px;
     position: relative;
     top: 6px;
@@ -243,7 +243,7 @@ h1 img{
     display: block;
     font-weight: 700;
     padding: 15px 20px;
-    color: #ebe8e1;
+    color: #fff;
 }
 .menuBar_drop a:first-child {
     padding-top: 15px;
@@ -288,6 +288,7 @@ footer{
     float: left;
     margin:7px 30px 0 0px;
 }
+
 #footerInner ul li::after{
     content: "|";
     position: relative;
@@ -297,6 +298,14 @@ footer{
 }
 #footerInner ul li:last-child::after{
     content: "";
+}
+
+#footerInner ul li a {
+    font-weight: 550;
+    color: #444;
+}
+#footerInner ul li a:hover {
+    color: #ccc;
 }
     /*상단리스트 종료 */
     /*////////////////////////////////*/

@@ -192,6 +192,8 @@ html, body{
     text-align: right;
     color: #777;
     font-weight: bold;
+    position: relative;
+    right: 10px;
 }
 .adv > .radio:first-child {
     margin-bottom: 5px;

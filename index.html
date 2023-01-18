@@ -18,6 +18,24 @@
     <script src="js/index.js"></script>
     <script src="js/common.js"></script>
 
+    <!-- 적응형 웹 스크립트-->
+    <script>
+        let smartPhones = [
+            'iphone','ipod','ipad','opera mini','opera mobi','nokia','android','webos','windows ce','blackberry','iemobile','sonyericsson'
+        ];
+        // // 기종 확인
+        // let user = navigator.userAgent;
+        // alert(user)
+
+        // 스마트폰 구분
+        for(let i in smartPhones) {
+            // navigator.userAgent => 기기 정보  lowercase로 전부 소문자로 바꿔서 비교
+            if(navigator.userAgent.toLowerCase().match(new RegExp(smartPhones[i]))){
+                document.location='http://alpaca02.dothome.co.kr/mindex.html';
+            }
+        }
+    </script>
+
 
     <!--웹폰트 링크 연결-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -106,8 +124,8 @@
             <h2 class="hidden">메인 배너</h2>
                 <div class="banner banner1">
                     <div>
-                        <h3>화제의 소설, 친밀한  이방인</h3>
-                        <p>드라마 &lt;안나&gt; 원작</p>
+                        <h3>친밀한  이방인</h3>
+                        <p>화제의 드라마 &lt;안나&gt; 원작</p>
                     </div>
                 </div>
             <div class="banner banner2">
@@ -152,7 +170,7 @@
                 <!--책 이미지-->
                 <div id="bookImg">
                     <div id="img1">
-                        <a href="book_info/far_alone.html"><img src="images/todayBook/저만치 혼자서.jpg" alt="저만치 혼자서"></a>
+                        <a href="book_info/far_alone.html"><img src="images/todayBook/저만치_혼자서.jpg" alt="저만치 혼자서"></a>
                         <div class="innerImg">
                             <a href="book_info/far_alone.html">
                                 <h4>[강산무진] 이후 16년, 김훈 두번째 소설집</h4><br>
@@ -189,7 +207,7 @@
                 <!--사이드 메뉴-->
                 <div id="bookSide">
                     <div class="side side1">
-                        <span><img src="images/todayBook/저만치 혼자서.jpg" alt="저만치 혼자서"></span>
+                        <span><img src="images/todayBook/저만치_혼자서.jpg" alt="저만치 혼자서"></span>
                         <h4><span>[강산무진] 이후 16년,<br>김훈 두번째 소설집</span></h4>
                     </div>
                     <div class="side side2">
@@ -225,15 +243,15 @@
                             <p><a href="book_info/close_stranger.html"><strong>친밀한 이방인</strong><br>정한아</a></p>
                         </li>
                         <li>
-                            <a href="book_info/inflation.html"><img src="images/dayBest/인플레이션에서 살아남기.jpg" alt="인플레이션"></a>
+                            <a href="book_info/inflation.html"><img src="images/dayBest/인플레이션에서_살아남기.jpg" alt="인플레이션"></a>
                             <p><a href="book_info/inflation.html"><strong>인플레이션에서 살아남기</strong><br>오건영</a></p>
                         </li>
                         <li>
-                            <a href="book_info/natural_detergents.html"><img src="images/dayBest/천연 세제 생활.jpg" alt="천연세제생활"></a>
+                            <a href="book_info/natural_detergents.html"><img src="images/dayBest/천연_세제_생활.jpg" alt="천연세제생활"></a>
                             <p><a href="book_info/natural_detergents.html"><strong>천연 세제 생활</strong><br>박철원</a></p>
                         </li>
                         <li>
-                            <a href="book_info/convenience.html"><img src="images/dayBest/불편한 편의점.jpg" alt="불편한 편의점"></a>
+                            <a href="book_info/convenience.html"><img src="images/dayBest/불편한_편의점.jpg" alt="불편한 편의점"></a>
                             <p><a href="book_info/convenience.html"><strong>불편한 편의점</strong><br>김호연</a></p>
                         </li>
                     </ol>
@@ -245,11 +263,11 @@
                             <p><a href="book_info/reverse.html"><strong>역행자</strong><br>자청</a></p>
                         </li>
                         <li>
-                            <a href="book_info/inflation.html"><img src="images/dayBest/인플레이션에서 살아남기.jpg" alt="인플레이션"></a>
+                            <a href="book_info/inflation.html"><img src="images/dayBest/인플레이션에서_살아남기.jpg" alt="인플레이션"></a>
                             <p><a href="book_info/inflation.html"><strong>인플레이션에서 살아남기</strong><br>오건영</a></p>
                         </li>
                         <li>
-                            <a href="book_info/sonMoney.html"><img src="images/dayBest/아들아 돈공부 해야한다.jpg" alt="아들아 돈공부 해야한다"></a>
+                            <a href="book_info/sonMoney.html"><img src="images/dayBest/아들아_돈공부_해야한다.jpg" alt="아들아 돈공부 해야한다"></a>
                             <p><a href="book_info/sonMoney.html"><strong>아들아, 돈공부 해야한다</strong><br>정선용(정스토리)</a></p>
                         </li>
                         <li>
@@ -257,7 +275,7 @@
                             <p><a href="book_info/goodbye.html"><strong>작별인사</strong><br>김영하</a></p>
                         </li>
                         <li>
-                            <a href="book_info/convenience.html"><img src="images/dayBest/불편한 편의점.jpg" alt="불편한 편의점"></a>
+                            <a href="book_info/convenience.html"><img src="images/dayBest/불편한_편의점.jpg" alt="불편한 편의점"></a>
                             <p><a href="book_info/convenience.html"><strong>불편한 편의점</strong><br>김호연</a></p>
                         </li>
                     </ol>
@@ -269,7 +287,7 @@
                             <p><a href="book_info/reverse.html"><strong>역행자</strong><br>자청</a></p>
                         </li>
                         <li>
-                            <a href="book_info/inflation.html"><img src="images/dayBest/인플레이션에서 살아남기.jpg" alt="인플레이션"></a>
+                            <a href="book_info/inflation.html"><img src="images/dayBest/인플레이션에서_살아남기.jpg" alt="인플레이션"></a>
                             <p><a href="book_info/inflation.html"><strong>인플레이션에서 살아남기</strong><br>오건영</a></p>
                         </li>
                         <li>
@@ -277,7 +295,7 @@
                             <p><a href="book_info/goodbye.html"><strong>작별인사</strong><br>김영하</a></p>
                         </li>
                         <li>
-                            <a href="book_info/convenience.html"><img src="images/dayBest/불편한 편의점.jpg" alt="불편한 편의점"></a>
+                            <a href="book_info/convenience.html"><img src="images/dayBest/불편한_편의점.jpg" alt="불편한 편의점"></a>
                             <p><a href="book_info/convenience.html"><strong>불편한 편의점</strong><br>김호연</a></p>
                         </li>
                         <li>
@@ -313,14 +331,14 @@
                                 </li>
                                 <li>
                                     <a href="book_info/convenience.html">
-                                        <img src="images/bestSeller/novel/불편한 편의점.jpg" alt="불편한편의점">
+                                        <img src="images/bestSeller/novel/불편한_편의점.jpg" alt="불편한편의점">
                                         <p class="title"><strong>불편한 편의점</strong><br>김호연</p>
                                         <p class="price">14000원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="book_info/flamingo.html">
-                                        <img src="images/bestSeller/novel/홍학의 자리.jpg" alt="홍학의 자리">
+                                        <img src="images/bestSeller/novel/홍학의_자리.jpg" alt="홍학의 자리">
                                         <p class="title"><strong>홍학의 자리</strong><br>정해연</p>
                                         <p class="price">14000원</p>
                                     </a>
@@ -333,6 +351,7 @@
                                     </a>
                                 </li>
                             </ol>
+                            <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>더보기</a>
                         </div>
                     </div>
                     <div class="bestMenu" id="essay">
@@ -341,40 +360,41 @@
                             <ol>
                                 <li>
                                     <a href="book_info/hMart.html">
-                                        <img src="images/bestSeller/essay/H마트에서 울다.jpg" alt="H마트에서 울다">
+                                        <img src="images/bestSeller/essay/H마트에서_울다.jpg" alt="H마트에서 울다">
                                         <p class="title"><strong>H마트에서 울다</strong><br>미셸 자우너</p>
                                         <p class="price">16000원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="book_info/startBasics.html">
-                                        <img src="images/bestSeller/essay/모든 것은 기본에서 시작한다.jpg" alt="모든 것은 기본에서 시작한다">
+                                        <img src="images/bestSeller/essay/모든_것은_기본에서_시작한다.jpg" alt="모든 것은 기본에서 시작한다">
                                         <p class="title"><strong>모든 것은 기본에서 시작한다</strong><br>손웅정</p>
                                         <p class="price">16000원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="book_info/accomplish.html">
-                                        <img src="images/bestSeller/essay/당신은 결국 무엇이든 해내는 사람.jpg" alt="당신은 결국 무엇이든 해내는 사람">
+                                        <img src="images/bestSeller/essay/당신은_결국_무엇이든_해내는_사람.jpg" alt="당신은 결국 무엇이든 해내는 사람">
                                         <p class="title"><strong>당신은 결국 무엇이든 해내는 사람</strong><br>김상현</p>
                                         <p class="price">15000원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="book_info/myFood.html">
-                                        <img src="images/bestSeller/essay/나의 먹이.jpg" alt="나의 먹이">
+                                        <img src="images/bestSeller/essay/나의_먹이.jpg" alt="나의 먹이">
                                         <p class="title"><strong>나의 먹이</strong><br>들개이빨</p>
                                         <p class="price">13000원</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="book_info/contents.html">
-                                        <img src="images/bestSeller/essay/콘텐츠 만드는 마음.jpg" alt="콘텐츠 만드는 마음">
+                                        <img src="images/bestSeller/essay/콘텐츠_만드는_마음.jpg" alt="콘텐츠 만드는 마음">
                                         <p class="title"><strong>콘텐츠 만드는 마음</strong><br>서해인</p>
                                         <p class="price">13500원</p>
                                     </a>
                                 </li>
                             </ol>
+                            <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>더보기</a>
                         </div>
                     </div>
                     <div class="bestMenu" id="comic">
@@ -397,7 +417,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/bestSeller/comic/헌터x헌터 신장판.jpg" alt="헌터x헌터 신장판">
+                                        <img src="images/bestSeller/comic/헌터x헌터_신장판.jpg" alt="헌터x헌터 신장판">
                                         <p class="title"><strong>헌터X헌터 신장판</strong><br>토가시 요시히로</p>
                                         <p class="price">5500원</p>
                                     </a>
@@ -417,6 +437,7 @@
                                     </a>
                                 </li>
                             </ol>
+                            <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>더보기</a>
                         </div>
                     </div>
                 </div>
